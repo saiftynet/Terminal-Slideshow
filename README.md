@@ -24,4 +24,7 @@ As this matures it will also:-
 * Add more transitions
 * Add Audio
 
+
+Because this is scriptable, my intention is that the same script will be able to  generate SVG,
+PDF and HTML versions of the slideshow on demand
   
