@@ -2,7 +2,7 @@
 A  lightweight application for making presentations from a terminal, 
 
 ### Introduction
-This is a slide show application developed in more or less Pure Perl, that relies on Term::Graille
+This is a slide show application developed in more or less Pure Perl, that relies on [Term::Graille](https://github.com/saiftynet/Term-Graille)
 to generate a slideshow that can be presented from a ANSI terminal using ascii and UTF8 fonts.
 it is a work in progress and the first version is used to present the PerlayStation Games Console
 at TPRC 2023 in Toronto. It is currently crude and is a quick and dirty application written in a
