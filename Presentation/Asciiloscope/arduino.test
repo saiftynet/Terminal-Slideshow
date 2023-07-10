@@ -1,0 +1,19 @@
+	description   =>"Arduino Reader",
+	name          =>"aduino",
+	dataWindow    =>50,
+	internals     =>{ init=>eval {use Device::SerialPort::Arduino;}},
+                      device=>Device::SerialPort::Arduino->new(
+                      port     => '/dev/ttyUSB0',
+                      baudrate => 9600,
+                      databits => 8,
+                      parity   => 'none',
+                      ),
+	symbol        => "*",
+	colour        => "yellow bold",
+	source        => sub{
+					 my $self=shift;
+					 shift @{$self->{data}} if @{$self->{data}}>$self->{dataWindow};
+					 my $in=$self->{internals}{device}->receive();
+					 push @{$self->{data}},$in;
+				  },
+

@@ -1,0 +1,34 @@
+	description   =>"Arduino Reader",
+	name          =>"arduino",
+	dataWindow    =>50,
+	internals     =>{ init=>my $dummy=eval {use Device::SerialPort::Arduino},
+	                  port1=>'/dev/ttyUSB0',
+	                  port2=>'/dev/ttyUSB1',
+		            },
+	symbol        => "*",
+	colour        => "yellow bold",
+	source        => sub{
+					 my $self=shift;
+					 shift @{$self->{data}} if @{$self->{data}}>$self->{dataWindow};
+					 my $in="!";
+					 if (-e $self->{internals}{port1} or -e $self->{internals}{port2}){
+					   unless(defined $self->{internals}{device}){
+						 $self->{internals}{device}=Device::SerialPort::Arduino->new(
+                         port     =>  -e $self->{internals}{port1}?$self->{internals}{port1}:$self->{internals}{port2},
+                         baudrate => 9600,
+                         databits => 8,
+                         parity   => 'none',
+                        )
+                       };
+					   $self->{colour}="yellow bold";
+					   my $in=$self->{internals}{device}->receive();
+					 }
+					 else{
+					   delete $self->{internals}{device};
+					 }
+					 else {$self->{colour}="green bold";     # if port not connected , colour is greem
+					 }
+					 
+					 if ($in !~/\d/){$in=150+400*rand()};    # if no data, randoms noise is produced
+					 push @{$self->{data}},$in-300;
+				  },

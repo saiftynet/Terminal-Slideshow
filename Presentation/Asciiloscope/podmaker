@@ -1,0 +1,44 @@
+<html>
+<head>
+	<script>
+	function editPod(){
+		
+		
+	}
+	function editMD(){
+		
+	}
+	function load(){
+		
+		
+	}
+	function save(){
+		
+		
+	}
+	function viewHTML(){
+		
+		
+	}
+	</script>
+</head>
+<body>
+
+<div class=menu>
+<span class=button onclick=load()>Load</span>
+<span class=button onclick=save()>Save</span>
+<span class=button onclick=editPod()>Pod</span>
+<span class=button onclick=editMD()>MD</span>
+<span class=button onclick=viewHTML()>Preview</span>
+</div>6
+<div class=editArea>
+
+
+</div>
+<div class=helper>
+
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+cs; #Clear screen
+ce; #Center
+bk 20;
+fd 40;rt 160;pc green;
+fd 40;rt 160;pc yellow; 
+fd 40;rt 160;pc blue; 
+fd 40;rt 160;pc red; 
+fd 40;rt 160;pc magenta; 
+fd 40;rt 160;pc cyan; 
+fd 40;rt 160;pc yellow; 
+fd 40;rt 160;pc red; 
+fd 40; 
