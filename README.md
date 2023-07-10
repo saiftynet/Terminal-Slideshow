@@ -16,12 +16,12 @@ short time, but expected to improve.
 * Has a hierarchical menu
 * Can run external terminal applicatins as part of the presentation
 
-  As this matures it will also:- 
+As this matures it will also:- 
 
-  * Allow editing of the presentation
-  * Allow multiple themes
-  * Adjust scaling to optimise terminal windows
-  * Add more transitions
-  * Add Audio
+* Allow editing of the presentation
+* Allow multiple themes
+* Adjust scaling to optimise terminal windows
+* Add more transitions
+* Add Audio
 
   
